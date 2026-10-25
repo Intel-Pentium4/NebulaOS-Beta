@@ -1,0 +1,30 @@
+componentName: nebula
+welcomeStyleCalamares: false
+welcomeExpandingLogo: true
+windowExpanding: normal
+windowSize: 900px,600px
+windowPlacement: center
+sidebar: widget
+navigation: widget
+strings:
+  productName: "NebulaOS"
+  shortProductName: "NebulaOS"
+  version: "0.1"
+  shortVersion: "0.1"
+  versionedName: "NebulaOS 0.1"
+  shortVersionedName: "NebulaOS 0.1"
+  bootloaderEntryName: "NebulaOS"
+  productUrl: ""
+  supportUrl: ""
+  knownIssuesUrl: ""
+  releaseNotesUrl: ""
+  donateUrl: ""
+images:
+  productIcon: "nebula-icon.svg"
+  productLogo: "nebula-icon.svg"
+  productWelcome: "nebula-welcome.svg"
+style:
+  sidebarBackground: "#101827"
+  sidebarText: "#edf2ff"
+  sidebarBackgroundCurrent: "#243e62"
+  sidebarTextCurrent: "#ffffff"

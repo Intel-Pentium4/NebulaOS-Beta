@@ -1,0 +1,14 @@
+NEBULAOS 0.1 - COMPILAR DESDE WINDOWS SIN DEBIAN
+
+1. Extrae NebulaOS-0.1-Windows-Builder.zip.
+2. Crea una cuenta de GitHub si todavía no tienes una: https://github.com/
+3. Crea un repositorio llamado NebulaOS. Para empezar fácilmente, puedes hacerlo público.
+4. Sube el CONTENIDO de la carpeta NebulaOS-0.1 a la RAIZ del repositorio. No subas solo el ZIP. Comprueba que exista .github/workflows/build-iso.yml dentro del repositorio.
+5. Abre COMPILAR_NEBULAOS.bat y escribe usuario/NebulaOS.
+6. Si no tienes GitHub CLI, en la página que se abre pulsa Actions > Compilar ISO de NebulaOS > Run workflow. Elige Gaming o Minimal y confirma.
+7. Al terminar, descarga el artefacto NebulaOS-gaming-ISO o NebulaOS-minimal-ISO. Dentro estarán binary.iso y binary.iso.sha256.
+
+Si tienes GitHub CLI instalado y autenticado, el BAT puede iniciar la compilación, esperar y descargar automáticamente la ISO.
+
+IMPORTANTE: la ISO todavía no se ha compilado ni probado desde este entorno. Prueba primero en una máquina virtual antes de instalarla en un disco físico. El proceso necesita Internet y puede tardar bastante.
+Más instrucciones: docs/WINDOWS-BUILDER.md

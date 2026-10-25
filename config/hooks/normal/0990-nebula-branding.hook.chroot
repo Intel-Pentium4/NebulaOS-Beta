@@ -1,0 +1,21 @@
+#!/bin/sh
+set -eu
+
+# Reuse Debian's packaged Calamares module configuration, but select our own branding.
+# If Debian changes its configuration path or format, the build must be tested again.
+settings=/etc/calamares/settings.conf
+if [ -f "$settings" ]; then
+    if grep -Eq '^[[:space:]]*branding:[[:space:]]*debian[[:space:]]*$' "$settings"; then
+        sed -i -E 's/^([[:space:]]*branding:[[:space:]]*)debian([[:space:]]*)$/\1nebula\2/' "$settings"
+    else
+        echo "NebulaOS warning: no se encontró 'branding: debian' en $settings; revisar Calamares." >&2
+    fi
+fi
+
+# Hide the generic installer shortcut if the Debian settings package provides one.
+# Our own nebulaos-installer.desktop entry remains visible.
+if [ -f /usr/share/applications/calamares.desktop ] && ! grep -q '^NoDisplay=' /usr/share/applications/calamares.desktop; then
+    sed -i '/^\[Desktop Entry\]/a NoDisplay=true' /usr/share/applications/calamares.desktop
+fi
+
+# Do not auto-disable security, networking, or update services to chase a low RAM number.

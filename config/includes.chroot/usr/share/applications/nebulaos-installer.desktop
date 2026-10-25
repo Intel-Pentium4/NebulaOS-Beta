@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Instalar NebulaOS
+Comment=Instala el sistema en un disco o máquina virtual
+Exec=pkexec calamares
+TryExec=calamares
+Icon=/etc/calamares/branding/nebula/nebula-icon.svg
+Terminal=false
+Categories=System;

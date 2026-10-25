@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Bienvenido a NebulaOS
+Comment=Guía inicial y ayuda del sistema
+Exec=xdg-open /usr/share/doc/nebulaos/welcome.html
+Icon=preferences-desktop-theme
+Terminal=false
+Categories=System;

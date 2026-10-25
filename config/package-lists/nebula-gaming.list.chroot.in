@@ -1,0 +1,9 @@
+# Optional gaming utilities; Steam and external launchers are installed post-install
+lutris
+wine
+winetricks
+gamemode
+mangohud
+vulkan-tools
+mesa-utils
+flatpak
